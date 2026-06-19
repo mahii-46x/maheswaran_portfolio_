@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">ShopEasy</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+      
+    <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search products...">
+    <button onclick="searchProducts()">Search</button>
+</div>
+  </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to ShopEasy</h1>
+            <p>Discover Amazing Products at Great Prices</p>
+            <button>Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products">
+        <h2>Featured Products</h2>
+
+        <div class="product-container">
+
+            <div class="product-card">
+                <img src="data:image/jpeg;base64,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" alt="Product">
+                <h3>Wireless Headphones</h3>
+                <p>Rs.499</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://cdn.mos.cms.futurecdn.net/FkGweMeB7hdPgaSFQdgsfj-2000-80.jpg" alt="Product">
+                <h3>Smart Watch</h3>
+                <p>Rs.799</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://www.leetdesk.com/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fleetdesk%2FZk3-0iol0Zci9W2z_Blog_GamingMaus_TitleImage2.png%3Fauto%3Dformat%2Ccompress&w=3840&q=75" alt="Product">
+                <h3>Gaming Mouse</h3>
+                <p>Rs.299</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://tiimg.tistatic.com/fp/1/006/541/led-light-wireless-mini-portable-bluetooth-speaker-467.jpg" alt="Product">
+                <h3>Bluetooth Speaker</h3>
+                <p>RS.599</p>
+                <button>Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 ShopEasy. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+<script>
+function searchProducts() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+
+    let products = document.querySelectorAll(".product-card");
+
+    products.forEach(product => {
+        let productName = product.querySelector(".product-name")
+                                .textContent.toLowerCase();
+
+        if(productName.includes(input)){
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+</script>
